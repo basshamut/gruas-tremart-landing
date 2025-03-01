@@ -1,0 +1,386 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout title="Grúas Tremart - Asistencia en carretera 24/7">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <Image
+            src="/grua_servicio_via.png"
+            alt="Servicio de grúas"
+            width={1920}
+            height={1080}
+            class="object-cover brightness-50 w-full h-full"
+        />
+      </div>
+      <div class="container relative z-10 text-white">
+        <div class="max-w-2xl space-y-6">
+          <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+            Asistencia en carretera 24/7 cuando más lo necesitas
+          </h1>
+          <p class="text-lg md:text-xl text-gray-200">
+            Servicio profesional de grúas para todo tipo de vehículos terrestres. Rápidos, eficientes y siempre disponibles.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contacto" class="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+              Solicitar Grúa Ahora
+            </a>
+            <a href="#servicios" class="inline-flex h-12 items-center justify-center rounded-md border border-white bg-background/10 px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-background/20 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+              Nuestros Servicios
+            </a>
+          </div>
+          <div class="flex items-center gap-6 pt-4">
+            <div class="flex items-center gap-2">
+              <Icon name="lucide:clock" class="h-5 w-5 text-primary" />
+              <span>Disponible 24/7</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon name="lucide:map-pin" class="h-5 w-5 text-primary" />
+              <span>Cobertura Nacional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-16 md:py-24 bg-muted">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto">
+            Ofrecemos una amplia gama de servicios de asistencia para todo tipo de vehículos terrestres, adaptándonos a sus necesidades específicas.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 space-y-4">
+              <div class="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Icon name="lucide:truck" class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-xl font-bold">Servicio de Grúa</h3>
+              <p class="text-muted-foreground">
+                Transporte de vehículos averiados o accidentados a talleres o destinos específicos con total seguridad.
+              </p>
+              <a href="#" class="text-primary inline-flex items-center">
+                Más información <Icon name="lucide:chevron-right" class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+          </div>
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 space-y-4">
+              <div class="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Icon name="lucide:wrench" class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-xl font-bold">Asistencia en Carretera</h3>
+              <p class="text-muted-foreground">
+                Reparaciones in situ para problemas mecánicos menores, cambio de neumáticos y batería descargada.
+              </p>
+              <a href="#" class="text-primary inline-flex items-center">
+                Más información <Icon name="lucide:chevron-right" class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+          </div>
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 space-y-4">
+              <div class="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Icon name="lucide:shield" class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-xl font-bold">Rescate de Vehículos</h3>
+              <p class="text-muted-foreground">
+                Recuperación de vehículos en situaciones complicadas como cunetas, barrancos o terrenos difíciles.
+              </p>
+              <a href="#" class="text-primary inline-flex items-center">
+                Más información <Icon name="lucide:chevron-right" class="h-4 w-4 ml-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-16 md:py-24">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <Image
+                src="/grua_servicio.png"
+                alt="Equipo de Grúas Tremart"
+                width={800}
+                height={600}
+                class="rounded-lg shadow-lg object-cover w-full h-full"
+            />
+          </div>
+          <div class="space-y-6">
+            <div class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Sobre Nosotros
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold">Más de 20 años de experiencia en asistencia vial</h2>
+            <p class="text-muted-foreground">
+              En Grúas Tremart nos dedicamos a proporcionar servicios de asistencia en carretera de la más alta calidad.
+              Nuestro equipo de profesionales altamente capacitados está disponible las 24 horas del día,
+              los 7 días de la semana para ayudarle en cualquier emergencia vial.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:thumbs-up" class="h-5 w-5 text-primary mt-0.5" />
+                <span>Personal cualificado y certificado</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:thumbs-up" class="h-5 w-5 text-primary mt-0.5" />
+                <span>Flota moderna de grúas y vehículos de asistencia</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:thumbs-up" class="h-5 w-5 text-primary mt-0.5" />
+                <span>Tiempos de respuesta rápidos y eficientes</span>
+              </li>
+            </ul>
+            <a href="#" class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+              Conoce Nuestra Historia
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 md:py-24 bg-muted">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Por qué elegirnos?</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto">
+            Nos distinguimos por ofrecer un servicio excepcional, centrado en la satisfacción del cliente y la eficiencia.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 text-center space-y-4">
+              <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                <Icon name="lucide:clock" class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-lg font-bold">Disponibilidad 24/7</h3>
+              <p class="text-muted-foreground">
+                Estamos disponibles todos los días del año, a cualquier hora.
+              </p>
+            </div>
+          </div>
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 text-center space-y-4">
+              <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                <Icon name="lucide:map-pin" class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-lg font-bold">Amplia Cobertura</h3>
+              <p class="text-muted-foreground">
+                Servicio en toda la península y principales islas.
+              </p>
+            </div>
+          </div>
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 text-center space-y-4">
+              <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                <Icon name="lucide:shield" class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-lg font-bold">Máxima Seguridad</h3>
+              <p class="text-muted-foreground">
+                Protocolos estrictos para garantizar la integridad de su vehículo.
+              </p>
+            </div>
+          </div>
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 text-center space-y-4">
+              <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                <Icon name="lucide:thumbs-up" class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-lg font-bold">Profesionalidad</h3>
+              <p class="text-muted-foreground">
+                Personal altamente cualificado y con amplia experiencia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonios" class="py-16 md:py-24">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que dicen nuestros clientes</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto">
+            La satisfacción de nuestros clientes es nuestra mejor carta de presentación.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-2 text-yellow-400">
+                {Array(5).fill(0).map((_, i) => (
+                    <Icon name="lucide:star" class="h-4 w-4" />
+                ))}
+              </div>
+              <p class="italic">
+                "Excelente servicio. Tuve una avería en la autopista y en menos de 30 minutos ya estaban allí. Muy profesionales y amables."
+              </p>
+              <div class="flex items-center gap-3 pt-2">
+                <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span class="font-bold text-primary">MG</span>
+                </div>
+                <div>
+                  <p class="font-medium">María García</p>
+                  <p class="text-sm text-muted-foreground">Caracas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-2 text-yellow-400">
+                {Array(5).fill(0).map((_, i) => (
+                    <Icon name="lucide:star" class="h-4 w-4" />
+                ))}
+              </div>
+              <p class="italic">
+                "Tuve que llamarles un domingo por la noche y la respuesta fue inmediata. El conductor fue muy profesional y cuidadoso con mi vehículo."
+              </p>
+              <div class="flex items-center gap-3 pt-2">
+                <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span class="font-bold text-primary">JL</span>
+                </div>
+                <div>
+                  <p class="font-medium">Juan López</p>
+                  <p class="text-sm text-muted-foreground">Los Teques</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-none shadow-md rounded-lg bg-white">
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-2 text-yellow-400">
+                {Array(5).fill(0).map((_, i) => (
+                    <Icon name="lucide:star" class="h-4 w-4" />
+                ))}
+              </div>
+              <p class="italic">
+                "Servicio rápido y eficiente. Me solucionaron el problema en la carretera sin necesidad de remolcar el coche. Muy recomendable."
+              </p>
+              <div class="flex items-center gap-3 pt-2">
+                <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span class="font-bold text-primary">AR</span>
+                </div>
+                <div>
+                  <p class="font-medium">Ana Rodríguez</p>
+                  <p class="text-sm text-muted-foreground">Valencia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contacto" class="py-16 md:py-24 bg-primary text-primary-foreground">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-bold">¿Necesita asistencia en carretera?</h2>
+            <p class="text-primary-foreground/90 text-lg">
+              No espere más. Contáctenos ahora y nuestro equipo de profesionales estará con usted en el menor tiempo posible.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <Icon name="lucide:phone-call" class="h-5 w-5" />
+                <span class="text-lg font-medium">+58 412-5555555</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <Icon name="lucide:clock" class="h-5 w-5" />
+                <span>Disponible 24/7, 365 días al año</span>
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="tel:+34900123456" class="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-primary shadow transition-colors hover:bg-white/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                Solicitar Asistencia
+              </a>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Solicite información</h3>
+            <form class="space-y-4" id="contact-form">
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="space-y-2">
+                  <label for="name" class="text-sm font-medium text-gray-900">
+                    Nombre
+                  </label>
+                  <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+                      placeholder="Su nombre"
+                      required
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label for="phone" class="text-sm font-medium text-gray-900">
+                    Teléfono
+                  </label>
+                  <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+                      placeholder="Su teléfono"
+                      required
+                  />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-medium text-gray-900">
+                  Email
+                </label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+                    placeholder="Su email"
+                    required
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="message" class="text-sm font-medium text-gray-900">
+                  Mensaje
+                </label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+                    placeholder="¿En qué podemos ayudarle?"
+                    required
+                ></textarea>
+              </div>
+              <button type="submit" class="w-full inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                Enviar Solicitud
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // Simple form handling
+  document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Gracias por su mensaje. Nos pondremos en contacto con usted lo antes posible.');
+  });
+</script>
+
