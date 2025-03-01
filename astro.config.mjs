@@ -16,6 +16,9 @@ export default defineConfig({
   image: {
     domains: ['placeholder.com'],
     remotePatterns: [{ protocol: "https" }]
-  }
+  },
+  output: 'static',
+  site: 'https://basshamut.github.io/',
+  base: '/gruas-tremart-landing/'
 });
 
