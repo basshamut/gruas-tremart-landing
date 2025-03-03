@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    name: string;
+    location: string;
+    testimonial: string;
+}
+
+const { name, location, testimonial } = Astro.props;
+---
+
+<div class="border-none shadow-md rounded-lg bg-white">
+    <div class="p-6 space-y-4">
+        <div class="flex items-center gap-2 text-yellow-400">
+            {Array(5).fill(0).map((_, i) => (
+                    <Icon name="lucide:star" class="h-4 w-4"/>
+            ))}
+        </div>
+        <p class="italic">{testimonial}</p>
+        <div class="flex items-center gap-3 pt-2">
+            <div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="font-bold text-primary">{name.split(' ').map(n => n[0]).join('')}</span>
+            </div>
+            <div>
+                <p class="font-medium">{name}</p>
+                <p class="text-sm text-muted-foreground">{location}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
