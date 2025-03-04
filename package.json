@@ -16,6 +16,7 @@
     "@iconify-json/mdi": "^1.2.3",
     "astro": "^5.4.1",
     "astro-icon": "^1.1.5",
+    "gruas-tremart-landing": "file:",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7"
   }
