@@ -5,6 +5,14 @@ import {Icon} from 'astro-icon/components';
 import placeholderAbout from '../assets/placeholder-about.jpg';
 import ServiceCard from '../components/ServiceCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
+import AliadoLogo from "../components/AliadoLogo.astro";
+
+const aliados = [
+    "Seguros Caracas",
+    "Servicios Gato motor, c.a.",
+    "Servicios VENEASISTENCIA c.a",
+    "Mapfre Asistencia CIA Inter de Seguros y Reaseguros, S.A"
+];
 ---
 
 <Layout title="Grúas Tremart - Asistencia en carretera 24/7">
@@ -255,8 +263,59 @@ import TestimonialCard from '../components/TestimonialCard.astro';
             </div>
         </section>
 
+        <!-- Aliados Comerciales Section -->
+        <section class="py-16 md:py-24" aria-labelledby="aliados-title">
+            <div class="container px-4 sm:px-6 lg:px-8">
+                <h2 id="aliados-title" class="text-3xl md:text-4xl font-bold mb-8 text-center">
+                    Nuestros Aliados Comerciales
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center">
+                        <Image
+                                src="/gruas-tremart-landing/logo_seguros_caracas_nuevo.png"
+                                alt="Seguros Caracas"
+                                width={200}
+                                height={100}
+                                class="rounded-lg shadow-lg object-cover max-w-[150px] sm:max-w-[120px] md:max-w-[150px] lg:max-w-[180px] h-auto"
+                        />
+                        <p class="mt-4 text-center text-xs">Seguros Caracas</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <Image
+                                src="/gruas-tremart-landing/logo_el_gato_motor.png"
+                                alt="Servicios Gato motor, c.a."
+                                width={200}
+                                height={100}
+                                class="rounded-lg shadow-lg object-cover max-w-[150px] sm:max-w-[120px] md:max-w-[150px] lg:max-w-[180px] h-auto"
+                        />
+                        <p class="mt-4 text-center text-xs">Servicios Gato motor, c.a.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <Image
+                                src="/gruas-tremart-landing/vene_asistencia-logo_400x400.jpg"
+                                alt="Servicios VENEASISTENCIA c.a"
+                                width={200}
+                                height={100}
+                                class="rounded-lg shadow-lg object-cover max-w-[150px] sm:max-w-[120px] md:max-w-[150px] lg:max-w-[180px] h-auto"
+                        />
+                        <p class="mt-4 text-center text-xs">Servicios VENEASISTENCIA c.a</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <Image
+                                src="/gruas-tremart-landing/mapfre_logo_1024x513-1-768x385.png"
+                                alt="Mapfre Asistencia"
+                                width={200}
+                                height={100}
+                                class="rounded-lg shadow-lg object-cover max-w-[150px] sm:max-w-[120px] md:max-w-[150px] lg:max-w-[180px] h-auto"
+                        />
+                        <p class="mt-4 text-center text-xs">Mapfre Asistencia CIA Inter de Seguros y Reaseguros, S.A</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonials -->
-        <section id="testimonios" class="py-16 md:py-24" aria-labelledby="testimonials-title">
+        <section id="testimonios" class="py-16 md:py-24 bg-muted" aria-labelledby="testimonials-title">
             <div class="container">
                 <div class="text-center mb-12">
                     <h2 id="testimonials-title" class="text-3xl md:text-4xl font-bold mb-4">Lo que dicen nuestros

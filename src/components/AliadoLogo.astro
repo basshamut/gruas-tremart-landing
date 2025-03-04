@@ -1,0 +1,20 @@
+---
+interface Props {
+    nombre: string;
+}
+
+const { nombre } = Astro.props;
+
+const logoMap = {
+    "Seguros Caracas": "SC",
+    "Servicios Gato motor, c.a.": "GM",
+    "Servicios VENEASISTENCIA c.a": "VA",
+    "Mapfre Asistencia CIA Inter de Seguros y Reaseguros, S.A": "MA"
+};
+
+const initials = logoMap[nombre] || nombre.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase();
+---
+
+<div class="flex items-center justify-center w-24 h-24 bg-primary rounded-full">
+    <span class="text-2xl font-bold text-white">{initials}</span>
+</div>
