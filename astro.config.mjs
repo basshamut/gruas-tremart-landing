@@ -18,7 +18,7 @@ export default defineConfig({
     remotePatterns: [{ protocol: "https" }]
   },
   output: 'static',
-  site: 'https://gruas-tremart-landing.vercel.app/gruas-tremart-landing/',
-  base: '/gruas-tremart-landing/'
+  site: 'https://gruas-tremart-landing.vercel.app/',
+  base: '/'
 });
 
