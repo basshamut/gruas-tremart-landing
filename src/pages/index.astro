@@ -2,20 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import {Image} from 'astro:assets';
 import {Icon} from 'astro-icon/components';
-import placeholderAbout from '../assets/placeholder-about.jpg';
 import ServiceCard from '../components/ServiceCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
-import AliadoLogo from "../components/AliadoLogo.astro";
-
-const aliados = [
-    "Seguros Caracas",
-    "Servicios Gato motor, c.a.",
-    "Servicios VENEASISTENCIA c.a",
-    "Mapfre Asistencia CIA Inter de Seguros y Reaseguros, S.A"
-];
 ---
 
-<Layout title="Grúas Tremart - Asistencia en carretera 24/7">
+<Layout title="Grúas Tre-Mart C.A. - Asistencia en carretera 24/7">
     <main id="main-content">
         <!-- Hero Section -->
         <section class="relative py-20 md:py-32 overflow-hidden" aria-labelledby="hero-title">
@@ -113,7 +104,7 @@ const aliados = [
                     <div>
                         <Image
                                 src="/grua_servicio.png"
-                                alt="Equipo de Grúas Tremart"
+                                alt="Equipo de Grúas Tre-Mart C.A."
                                 width={1200}
                                 height={900}
                                 class="rounded-lg shadow-lg object-cover w-full h-full"
@@ -126,7 +117,7 @@ const aliados = [
                         <h2 id="about-title" class="text-3xl md:text-4xl font-bold">Más de 18 años de experiencia en
                             asistencia vial</h2>
                         <p class="text-muted-foreground">
-                            En Grúas Tremart nos dedicamos a proporcionar servicios de asistencia en carretera de la más
+                            En Grúas Tre-Mart C.A. nos dedicamos a proporcionar servicios de asistencia en carretera de la más
                             alta calidad.
                             Nuestro equipo de profesionales altamente capacitados está disponible las 24 horas del día,
                             los 7 días de la semana para ayudarle en cualquier emergencia vial.
@@ -175,8 +166,8 @@ const aliados = [
 
                             <li class="flex flex-col items-start gap-2">
                                 <div class="flex items-center gap-2">
-                                <Icon name="lucide:thumbs-up" class="h-5 w-5 text-primary mt-0.5"/>
-                                <span class="block">Localidades:</span>
+                                    <Icon name="lucide:thumbs-up" class="h-5 w-5 text-primary mt-0.5"/>
+                                    <span class="block">Localidades:</span>
                                 </div>
 
                                 <ul class="list-disc pl-7 space-y-2 w-full">
@@ -210,7 +201,8 @@ const aliados = [
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Por qué elegirnos?</h2>
                     <p class="text-muted-foreground max-w-2xl mx-auto">
-                        Porque cumplimos con tiempos mínimos de llegada al origen de su vehículo, ya que su emergencia es nuestra emergencia
+                        Porque cumplimos con tiempos mínimos de llegada al origen de su vehículo, ya que su emergencia
+                        es nuestra emergencia
                     </p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-6 lg:px-8">
@@ -243,7 +235,8 @@ const aliados = [
                             </div>
                             <h3 class="text-lg font-bold">Máxima Seguridad</h3>
                             <p class="text-muted-foreground">
-                                Protocolos estrictos para garantizar su integridad física y la de su vehículo. Esas son nuestras prioridades.
+                                Protocolos estrictos para garantizar su integridad física y la de su vehículo. Esas son
+                                nuestras prioridades.
                             </p>
                         </div>
                     </div>
@@ -450,7 +443,6 @@ const aliados = [
     document.getElementById('contact-form')?.addEventListener('submit', function (e) {
         e.preventDefault();
         alert('Gracias por su mensaje. Nos pondremos en contacto con usted lo antes posible.');
-        this.reset();
     });
 </script>
 
