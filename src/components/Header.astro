@@ -50,8 +50,7 @@ import { Icon } from 'astro-icon/components';
   window.addEventListener('scroll', () => {
     let current = '';
 
-    sections.forEach(section => {
-      const sectionTop = (section as HTMLElement).offsetTop;
+    sections.forEach(section => {      const sectionTop = (section as HTMLElement).offsetTop;
       const sectionHeight = section.clientHeight;
       if (scrollY >= (sectionTop - 200)) {
         current = section.getAttribute('id') || '';
@@ -63,7 +62,7 @@ import { Icon } from 'astro-icon/components';
       if (link.getAttribute('href')?.includes(current)) {
         link.classList.add('text-primary');
       }
-    });
+    });-
   });
 </script>
 
