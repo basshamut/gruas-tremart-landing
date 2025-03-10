@@ -1,0 +1,112 @@
+<form id="contact-form" class="space-y-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="space-y-2">
+            <label for="name" class="text-sm font-medium text-gray-900">
+                Nombre
+            </label>
+            <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+                placeholder="Su nombre"
+            />
+        </div>
+        <div class="space-y-2">
+            <label for="phone" class="text-sm font-medium text-gray-900">
+                Teléfono
+            </label>
+            <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+                placeholder="Su teléfono"
+            />
+        </div>
+    </div>
+    <div class="space-y-2">
+        <label for="email" class="text-sm font-medium text-gray-900">
+            Email
+        </label>
+        <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+            placeholder="Su email"
+        />
+    </div>
+    <div class="space-y-2">
+        <label for="message" class="text-sm font-medium text-gray-900">
+            Mensaje
+        </label>
+        <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            class="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+            placeholder="¿En qué podemos ayudarle?"></textarea>
+    </div>
+    <button
+        type="submit"
+        class="w-full inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+    >
+        Enviar Solicitud
+    </button>
+</form>
+
+<p id="form-response" class="mt-4 text-center text-sm font-medium"></p>
+
+<script>
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            const form = event.target;
+            const formData = new FormData(form as HTMLFormElement);
+            const responseMessage = document.getElementById("form-response");
+
+            try {
+                const response = await fetch("/api/sendEmail", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                });
+
+                if (response.ok) {
+                    if (responseMessage) {
+                        responseMessage.textContent =
+                            "¡Mensaje enviado con éxito!";
+                        responseMessage.classList.add("text-green-600");
+                    }
+                    if (form) {
+                        (form as HTMLFormElement).reset(); // Limpia el formulario
+                    }
+                } else {
+                    throw new Error(
+                        "Error al enviar el formulario. Inténtalo de nuevo.",
+                    );
+                    if (responseMessage) {
+                        responseMessage.textContent = "Error al enviar el formulario. Inténtalo de nuevo.";
+                        responseMessage.classList.add("text-red-600");
+                    } else {
+                        console.error("responseMessage element not found.");
+                    }
+                }
+            } catch (error) {
+                if (responseMessage) {
+                    responseMessage.textContent =
+                        "Error al enviar el formulario. Inténtalo de nuevo.";
+                    responseMessage.classList.add("text-red-600");
+                } else {
+                    console.error("responseMessage element not found.");
+                }
+            }
+        });
+    }
+</script>
