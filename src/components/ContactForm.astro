@@ -63,49 +63,22 @@
 <p id="form-response" class="mt-4 text-center text-sm font-medium"></p>
 
 <script>
+    import { sendContactForm } from "../api/sendEmail.js";
+
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
         contactForm.addEventListener("submit", async function (event) {
-            event.preventDefault(); // Evita que la página se recargue
-
-            const form = event.target;
-            const formData = new FormData(form as HTMLFormElement);
+            event.preventDefault();
+            const formData = new FormData(event.target as HTMLFormElement);
             const responseMessage = document.getElementById("form-response");
 
-            try {
-                const response = await fetch("/api/sendEmail", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                });
-
-                if (response.ok) {
-                    if (responseMessage) {
-                        responseMessage.textContent =
-                            "¡Mensaje enviado con éxito!";
-                        responseMessage.classList.add("text-green-600");
-                    }
-                    if (form) {
-                        (form as HTMLFormElement).reset(); // Limpia el formulario
-                    }
-                } else {
-                    throw new Error(
-                        "Error al enviar el formulario. Inténtalo de nuevo.",
-                    );
-                    if (responseMessage) {
-                        responseMessage.textContent = "Error al enviar el formulario. Inténtalo de nuevo.";
-                        responseMessage.classList.add("text-red-600");
-                    } else {
-                        console.error("responseMessage element not found.");
-                    }
-                }
-            } catch (error) {
-                if (responseMessage) {
-                    responseMessage.textContent =
-                        "Error al enviar el formulario. Inténtalo de nuevo.";
-                    responseMessage.classList.add("text-red-600");
-                } else {
-                    console.error("responseMessage element not found.");
-                }
+            const result = await sendContactForm(formData);
+            if (result.success) {
+                responseMessage.textContent = "¡Mensaje enviado con éxito!";
+                responseMessage.classList.add("text-green-600");
+                event.target.reset();
+            } else {
+                responseMessage.textContent = "Error al enviar el formulario.";
             }
         });
     }
