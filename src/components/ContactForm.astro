@@ -73,10 +73,15 @@
             const responseMessage = document.getElementById("form-response");
 
             const result = await sendContactForm(formData);
+            if (!responseMessage || !event || !event.target){
+                console.error("No se pudo enviar el formulario");
+                return
+            }
+
             if (result.success) {
                 responseMessage.textContent = "¡Mensaje enviado con éxito!";
                 responseMessage.classList.add("text-green-600");
-                event.target.reset();
+                (event.target as HTMLFormElement).reset();
             } else {
                 responseMessage.textContent = "Error al enviar el formulario.";
             }
