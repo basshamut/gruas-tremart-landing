@@ -1,0 +1,43 @@
+name: Deploy Astro to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Cambia si tu rama principal tiene otro nombre
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Instalar pnpm
+        run: npm install -g pnpm@11
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
+      - name: Construir el sitio
+        env:
+          SHOW_BUY_BUTTON: true
+        run: pnpm run build
+
+      - name: Subir archivos para GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Desplegar en GitHub Pages
+        uses: actions/deploy-pages@v4
