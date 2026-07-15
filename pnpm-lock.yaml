@@ -18,7 +18,7 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3
       astro:
-        specifier: ^5.6.3
+        specifier: ^5.4.1
         version: 5.18.1(@types/node@25.7.0)(jiti@1.21.7)(rollup@4.60.3)(typescript@5.9.3)(yaml@2.9.0)
       astro-icon:
         specifier: ^1.1.5
@@ -1984,6 +1984,7 @@ packages:
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
     engines: {node: ^18 || >=20}
+    deprecated: unmaintained
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
